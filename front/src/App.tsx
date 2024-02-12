@@ -1,36 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Workspace from "@layouts/Workspace";
+
+import { Routes ,Route,Navigate } from 'react-router-dom';
+import loadable from "@loadable/component";
+
+
+const LogIn=loadable(()=> import('@pages/Login'));
+// const SignUp =loadable(()=> import('@pages/SignUp'));
+const Group = loadable(()=>import('@pages/Group'));
+const MyChat = loadable(()=>import('@pages/MyChat'));
+const MyProfile = loadable(()=>import('@pages/MyProfile'));
+const Private = loadable(()=>import('@pages/Private'));
+
 
 function App() {
-  const [count, setCount] = useState(0)
+    console.log("APP");
 
   return (
-    <>
-        <Workspace></Workspace>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Routes>
+      <Route path="/" element={<Navigate to="/login" />} />
+        <Route path = '/login' element={<LogIn/>}/>
+        {/*<Route path = '/signUp' element={<SignUp/>}/>*/}
+        <Route path = '/group' element={<Group/>}/>
+        <Route path = '/mychat' element={<MyChat/>}/>
+        <Route path = '/myprofile' element={<MyProfile/>}/>
+        <Route path = '/private' element={<Private/>}/>
+    </Routes>
+
   )
 }
 

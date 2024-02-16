@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Header from "layouts/Header";
+import Header from "@layouts/Header";
 
 const MyProfile:FC =()=>{
 	return (

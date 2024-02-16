@@ -1,7 +1,5 @@
 
-import { FC } from "react";
-
-const Header:FC =()=>{
+const Header =()=>{
   console.log("헤더!!")
     return(
         <h1>

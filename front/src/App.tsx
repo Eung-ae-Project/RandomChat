@@ -3,12 +3,12 @@ import { Routes ,Route,Navigate } from 'react-router-dom';
 import loadable from "@loadable/component";
 
 
-const LogIn=loadable(()=> import('@pages/Login'));
+const LogIn=loadable(()=> import('./pages/Login'));
 // const SignUp =loadable(()=> import('@pages/SignUp'));
-const Group = loadable(()=>import('@pages/Group'));
-const MyChat = loadable(()=>import('@pages/MyChat'));
-const MyProfile = loadable(()=>import('@pages/MyProfile'));
-const Private = loadable(()=>import('@pages/Private'));
+const Group = loadable(()=>import('./pages/Group'));
+const MyChat = loadable(()=>import('./pages/MyChat'));
+const MyProfile = loadable(()=>import('./pages/MyProfile'));
+const Private = loadable(()=>import('./pages/Private'));
 
 
 function App() {

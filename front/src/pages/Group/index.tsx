@@ -4,7 +4,7 @@ const Group =()=>{
 
 	return(
 		<>
-			<Header></Header>
+			<Header/>
 			<h1>단체채팅</h1>
 		</>
 	)

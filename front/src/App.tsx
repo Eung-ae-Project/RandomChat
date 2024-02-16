@@ -4,7 +4,7 @@ import loadable from "@loadable/component";
 
 
 const LogIn=loadable(()=> import('./pages/Login'));
-// const SignUp =loadable(()=> import('@pages/SignUp'));
+const SignUp =loadable(()=> import('@pages/Signup'));
 const Group = loadable(()=>import('./pages/Group'));
 const MyChat = loadable(()=>import('./pages/MyChat'));
 const MyProfile = loadable(()=>import('./pages/MyProfile'));
@@ -18,7 +18,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigate to="/login" />} />
         <Route path = '/login' element={<LogIn/>}/>
-        {/*<Route path = '/signUp' element={<SignUp/>}/>*/}
+        {<Route path = '/signUp' element={<SignUp/>}/>}
         <Route path = '/group' element={<Group/>}/>
         <Route path = '/mychat' element={<MyChat/>}/>
         <Route path = '/myprofile' element={<MyProfile/>}/>

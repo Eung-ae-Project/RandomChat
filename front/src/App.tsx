@@ -18,10 +18,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigate to="/login" />} />
         <Route path = '/login' element={<LogIn/>}/>
-        {<Route path = '/signUp' element={<SignUp/>}/>}
+        <Route path = '/signUp' element={<SignUp/>}/>
         <Route path = '/group' element={<Group/>}/>
-        <Route path = '/mychat' element={<MyChat/>}/>
-        <Route path = '/myprofile' element={<MyProfile/>}/>
+        <Route path = '/myChat' element={<MyChat/>}/>
+        <Route path = '/myProfile' element={<MyProfile/>}/>
         <Route path = '/private' element={<Private/>}/>
     </Routes>
 

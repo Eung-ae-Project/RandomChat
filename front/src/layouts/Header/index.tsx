@@ -14,7 +14,7 @@ interface css{
   css: SerializedStyles | undefined;
 }
 
-const Header =(location:string)=>{
+const Header =()=>{
   console.log("헤더!!")
 
 

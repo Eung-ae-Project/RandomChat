@@ -4,7 +4,7 @@ import {css} from "@emotion/react";
 
 
 export const Head = styled.ul`
-  height: 120px;
+  height: 140px;
     font-weight: 1000;
     font-size: 39px;
     margin:0;

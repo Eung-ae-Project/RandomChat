@@ -1,11 +1,21 @@
 import Header from "@layouts/Header";
+import {Search} from "@pages/Group/styles";
 
 const Group =()=>{
 
 	return(
 		<>
 			<Header/>
-			<h1>단체채팅</h1>
+			<Search>
+				<form>
+					<input type="text"/>
+					<button></button>
+				</form>
+			</Search>
+			<HotChat>
+				<h2>실시간 인기 채팅방</h2>
+				<div></div>
+			</HotChat>
 		</>
 	)
 }

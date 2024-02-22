@@ -1,6 +1,7 @@
 import {Input, Button, Form,Label, Img, Span} from './styles';
 import { useCallback, useState } from 'react';
 import useInput from '@/hooks/useInput';
+import axios from "axios";
 
 
 const Signup = () =>{
@@ -13,13 +14,13 @@ const Signup = () =>{
   const[mismatchError,setMismatchError] = useState(false);
   const [signUpError, setSignUpError] = useState('');
   const [signUpSuccess, setSignUpSuccess] = useState(false);
-  const onChangePassword = useCallback((e:React.ChangeEvent<HTMLInputElement>)=>{
+  const onChangePassword = useCallback((e:any)=>{
     setPasswd(e.target.value);
     setMismatchError(e.target.value !== passwdcheck);
-    
+
   },[passwdcheck]);
 
-  const onChangePasswordCheck = useCallback((e:React.ChangeEvent<HTMLInputElement>)=>{
+  const onChangePasswordCheck = useCallback((e:any)=>{
     setPasswdcheck(e.target.value);
     setMismatchError(e.target.value !== passwd);
   },[passwd]);
@@ -33,15 +34,15 @@ const Signup = () =>{
       axios.post('url',{
         name,id,passwd,nickname,mbti
       })
-      .then((response)=>{
-        console.log(response);
-        setSignUpSuccess(true);
-      })
-      .catch((error)=>{
-      console.log(error.response);
-      setSignUpError(error.response.data);
-      })
-      .finally(()=>{});
+        .then((response)=>{
+          console.log(response);
+          setSignUpSuccess(true);
+        })
+        .catch((error)=>{
+          console.log(error.response);
+          setSignUpError(error.response.data);
+        })
+        .finally(()=>{});
     }
   },[name,id,passwd,nickname,mbti,passwdcheck,mismatchError]);
 
@@ -55,9 +56,7 @@ const Signup = () =>{
         <div className="form-group">
           <Label htmlFor="name">
             <Span>이름</Span>
-            <Input type='name' id='name' name='name' value ={name} 
-            onChange={(e)=>{setName(e.target.value)}
-            } />
+            <Input type='name' id='name' name='name' value ={name} onChange={setName}/>
           </Label>
         </div>
         <div className="form-group">

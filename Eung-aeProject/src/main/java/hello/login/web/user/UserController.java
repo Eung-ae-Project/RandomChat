@@ -1,7 +1,7 @@
-package hello.login.web.member;
+package hello.login.web.user;
 
-import hello.login.domain.member.Member;
-import hello.login.domain.member.MemberRepository;
+import hello.login.domain.user.User;
+import hello.login.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -14,21 +14,21 @@ import javax.validation.Valid;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/members")
-public class MemberController {
-    private final MemberRepository memberRepository;
+@RequestMapping("/api/users")
+public class UserController {
+    private final UserRepository userRepository;
 
     @GetMapping("/add")
-    public String addForm(@ModelAttribute("member") Member member) {
-        return "members/addMemberForm";
+    public String addForm(@ModelAttribute("user") User user) {
+        return "users/addUserForm";
     }
 
     @PostMapping("/add")
-    public String save(@Valid @ModelAttribute Member member, BindingResult result) {
+    public String save(@Valid @ModelAttribute User user, BindingResult result) {
         if (result.hasErrors()) {
-            return "members/addMemberForm";
+            return "users/addUserForm";
         }
-        memberRepository.save(member);
+        userRepository.save(user);
         return "redirect:/";
     }
 }

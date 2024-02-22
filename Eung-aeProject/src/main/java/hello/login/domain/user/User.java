@@ -1,11 +1,11 @@
-package hello.login.domain.member;
+package hello.login.domain.user;
 
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 
 @Data
-public class Member {
+public class User {
 
     private Long id;
 

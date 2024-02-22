@@ -1,19 +1,19 @@
 import styled from '@emotion/styled';
-import {Link, NavLink} from "react-router-dom";
-import {css} from "@emotion/react";
+import {NavLink} from "react-router-dom";
+
 
 
 export const Head = styled.ul`
-  height: 140px;
+  height: 110px;
     font-weight: 1000;
-    font-size: 39px;
+    font-size: 35px;
     margin:0;
     padding: 0;
     
     font-style: normal;
     & > :first-of-type {
         /* 첫 번째 자식 요소에 대한 스타일 */
-        flex-basis: 170%;
+        flex-basis: 180%;
         justify-content: start;
         padding-left: 50px;
     }
@@ -44,38 +44,4 @@ export const NavBar = styled(NavLink)`
     justify-content: center;
     
 `;
-
-export const FocusedLink = styled(Link)`
-	color:white;
-    width: 100%;
-    height: 100%;
-    
-	text-decoration: none;
-    background: #A4D3FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-`;
-
-
-/* 도키도키 랜덤채팅 */
-
-// position: absolute;
-// width: 441px;
-// height: 148px;
-// left: 0px;
-// top: 2px;
-//
-// font-family: 'BM HANNA_TTF';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 48px;
-// line-height: 48px;
-// display: flex;
-// align-items: center;
-// text-align: center;
-// text-transform: capitalize;
-//
-// color: #878787;
 

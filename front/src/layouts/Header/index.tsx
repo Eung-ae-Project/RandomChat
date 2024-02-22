@@ -3,16 +3,11 @@ import {
   StyledLink,Head, NavBar,
 
 } from "@layouts/Header/styles"
-import {Link, NavLink, useLocation, useParams} from "react-router-dom";
+import { useLocation,} from "react-router-dom";
 import React from "react";
-import {SerializedStyles} from "@emotion/react";
 
 
-interface css{
-  key: string;
-  to: string;
-  css: SerializedStyles | undefined;
-}
+
 
 const Header =()=>{
   console.log("헤더!!")

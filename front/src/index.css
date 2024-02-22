@@ -13,8 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
+
+
   margin: 0;
-  min-width: 1210px;
+  min-width: 1650px;
+  font-size: 35px;
   min-height: 100vh;
 }
 @font-face {

@@ -63,6 +63,7 @@ export const Input = styled.input`
 `;
 
 export const Label = styled.label`
+     
     ${({id})=>
     id === 'islogoin' &&`
     display:flex;

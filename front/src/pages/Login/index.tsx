@@ -2,7 +2,10 @@ import React,{useCallback,useState} from 'react';
 import useInput from '../../hooks/useInput';
 import axios from 'axios';
 import {Button, Img, Form, Input, Label} from './styles';
+import useSWR from "swr";
+import fetcher from "@utils/fetcher";
 const Login =()=>{
+	const {data,error,mutate}:any = useSWR("/api/users/login",fetcher,);
 	const [logInError, setLogInError] = useState(false);
 	const[id,onchangeId] = useInput('');
 	const[password,onchangePassword] = useInput('');
@@ -12,19 +15,20 @@ const Login =()=>{
 			setLogInError(false);
 			axios
 			.post(
-				'',
+				'/api/users/login',
 				{id,password},
 				{withCredentials:true,}
 			)
-			.then(()=>{
-
+			.then((response)=>{
+				mutate(response.data,false);
 			})
 			.catch((error)=>{
+				console.dir(error);
 				setLogInError(error.response?.status === 401);
 			})
 		},[id,password],
 	);
-	
+
 
 	return(
 		<div id ='container'>

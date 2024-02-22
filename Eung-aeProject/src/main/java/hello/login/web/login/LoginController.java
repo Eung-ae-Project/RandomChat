@@ -69,12 +69,12 @@ public class LoginController {
         return "redirect:/";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/api/users/login")
     public String loginV3(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletRequest request) {
         if (bindingResult.hasErrors()) {
             return "login/loginForm";
         }
-
+        System.out.println("LoginController.loginV3");
         Member loginMember = loginService.login(form.getEmail(), form.getPassword());
         log.info("login? {}", loginMember);
 

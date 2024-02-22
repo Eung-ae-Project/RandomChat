@@ -1,13 +1,13 @@
-package Eungae.EungaeProject;
+package hello.login;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EungAeProjectApplication {
+public class ItemServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EungAeProjectApplication.class, args);
+		SpringApplication.run(ItemServiceApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package Eungae.EungaeProject;
+package hello.login;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EungAeProjectApplicationTests {
+class ItemServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -98,7 +98,16 @@ export const ChatOption = styled.div`
 				font-size: 24px;
 				font-weight: 800;
 		}
+		& span:hover{
+				cursor: default;
+		}
+    & svg{
+        margin-left: 4px;
+        margin-bottom: 1px;
+    }
+		
 `;
+
 export const ChatBoxSect = styled.div`
 	margin-top: 10px;
 		display: flex;

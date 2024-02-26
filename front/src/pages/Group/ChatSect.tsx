@@ -1,6 +1,9 @@
 import React, { ChangeEvent, MouseEvent, useState } from "react";
 import { Box, ChatBoxSect, ChatList, ChatOption, ChatSection, LeftBar, Li, RightBar } from "@pages/Group/styles";
 import axios from "axios";
+import { faCaretDown, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DropDown from "@components/DropDown/DropDown";
 
 const ChatSect=()=>{
 
@@ -23,6 +26,11 @@ const ChatSect=()=>{
         {index:4,title:"취미 사진방", hashtag:["사진","카메라","필름","디카","보정"], lastChat:46},
         {index:5,title:"틀딱 모임", hashtag:["틀니","압수","경로당","20","19","18"], lastChat:70},
         {index:6,title:"동쿡대 코인방", hashtag:["비트코인","이더리움","자살추천","도지","자살명소","존버","살자","오킹"], lastChat:1883},
+    ]
+    const options = [
+        {value:"recommend",label:"추천순"},
+        {value:"recentChat",label:"최근 대화순"},
+        {value:"numberOfPeople",label:"인원순"},
     ]
     const loadChat=(e:any)=>{
         // 벨류값 참고해서 벨류 값에 따라 db에 가져올 데이터가 달라짐
@@ -104,12 +112,19 @@ const ChatSect=()=>{
 					</LeftBar>
 					<RightBar>
 						<ChatOption>
-							<span>정렬기준</span>
-							<span>채팅방 생성</span>
+							<span>
+								정렬기준
+								<FontAwesomeIcon icon={faCaretDown} />
+								<DropDown></DropDown>
+							</span>
+							<span className="generateChat">
+								채팅방 생성
+								<FontAwesomeIcon icon={faPlus} />
+							</span>
 						</ChatOption>
 						<ChatBoxSect>
-                <ChatBox/>
-            </ChatBoxSect>
+							<ChatBox />
+						</ChatBoxSect>
 					</RightBar>
 				</ChatList>
 			</ChatSection>

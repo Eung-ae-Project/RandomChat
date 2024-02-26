@@ -17,8 +17,8 @@ const Header =()=>{
     const selectedPath = location.pathname;
 
     const links = [
-      { path: '/private', text: '1:1 채팅' },
       { path: '/group', text: '단체 채팅' },
+      { path: '/private', text: '1:1 채팅' },
       { path: '/myChat', text: '내 채팅' },
       { path: '/myProfile', text: '내 프로필' }
     ];

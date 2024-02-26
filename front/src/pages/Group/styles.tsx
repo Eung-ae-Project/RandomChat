@@ -43,7 +43,7 @@ export const HotChat = styled.div`
     display: flex;
     justify-content: center;
     border-bottom: 2px solid #A4D3FF;
-    height: 400px;
+    height: 550px;
     font-size: 23px;
     
 `;
@@ -54,7 +54,7 @@ export const ChatSection = styled.div`
 
 export const ChatList = styled.div`
     display: flex;
-    height: 1000px;
+    height: 100%;
     width: 75%;
 		
     
@@ -62,6 +62,7 @@ export const ChatList = styled.div`
 export const LeftBar = styled.div`
     display: flex;
     font-weight: 1000;
+		border-left: 2px solid #A4D3FF;
     border-right: 2px solid #A4D3FF;
     width: 25%;
     justify-content: center;
@@ -82,7 +83,53 @@ export const Li =styled.li`
     color: rgba(135, 135, 135, 100);
 `;
 export const RightBar = styled.div`
-		display: flex;
-		justify-content: end;
     width: 100%;
+    border-right: 2px solid #A4D3FF;
+		
+`;
+
+export const ChatOption = styled.div`
+	width: 100%;
+		height: 50px;
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		& span{
+				font-size: 24px;
+				font-weight: 800;
+		}
+`;
+export const ChatBoxSect = styled.div`
+	margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	width: 100%;
+`;
+export const Box = styled.div`
+	margin-bottom: 25px;
+		background: #A4D3FF;
+	width: 90%;
+		border: 1px solid ;
+		height: 140px;
+		border-radius: 20px;
+    color: white;
+		& h3{
+				font-size: 28px;
+				
+		}
+		& span{
+				font-size: 15px;
+		}
+		& .title{
+				display: flex;
+				justify-content: center;
+		}
+		& .sub{
+				font-weight: 550;
+				margin: 15px;
+				display: flex;
+				justify-content: space-between;
+		}
 `;

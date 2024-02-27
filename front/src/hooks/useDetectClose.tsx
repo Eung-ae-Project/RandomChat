@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-const useDetectClose = (initialState) => {
+const useDetectClose = (initialState:any) => {
 	const [isOpen, setIsOpen] = useState(initialState);
 	const ref = useRef(null);
 
@@ -9,8 +9,8 @@ const useDetectClose = (initialState) => {
 	};
 
 	useEffect(() => {
-		const onClick = (e) => {
-			if (ref.current !== null && !ref.current.contains(e.target)) {
+		const onClick = (e:any) => {
+			if (ref.current !== null && !(ref.current == e.currentTarget)) {
 				setIsOpen(!isOpen);
 			}
 		};
@@ -28,4 +28,5 @@ const useDetectClose = (initialState) => {
 };
 
 export default useDetectClose;
+
 

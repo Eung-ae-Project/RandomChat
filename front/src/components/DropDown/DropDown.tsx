@@ -1,29 +1,40 @@
-import {useRef, useState} from "react";
-import Link from "react-router-dom";
-import styles from "@components/DropDown/styles";
-import classNames from "classNames";
+import React from "react";
 import useDetectClose from "@hooks/useDetectClose";
 
+import { DropdownButton, DropdownContainer, LinkWrapper, Menu, Ul, Wrapper,Li } from "@components/DropDown/styles";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const DropDown = () => {
-	const dropDownRef = useRef(null);
-	const [isOpen, setIsOpen] = useDetectClose(dropDownRef, false);
+
+const DropdownMenu = () => {
+	const [myPageIsOpen, myPageRef, myPageHandler] = useDetectClose(false);
+	const [boardIsOpen, boardRef, boardHandler] = useDetectClose(false);
+
+
 	return (
-		<div className={styles.dropDownMenu}>
-			<button onClick={() => setIsOpen(!isOpen)}>메뉴 보기</button>
-
-			<ul
-				ref={dropDownRef}
-				className={classNames(styles.menu, { [styles.active]: isOpen })}
-			>
-				<li>추천순</li>
-				<li>마지막 대화순</li>
-				<li>인원순</li>
-				
-				{/* 메뉴 리스트들 */}
-			</ul>
-		</div>
+		<Wrapper>
+			<DropdownContainer>
+				<DropdownButton onClick={myPageHandler} ref={myPageRef}>
+					<span>정렬기준</span>
+					<FontAwesomeIcon icon={faCaretDown} />
+				</DropdownButton>
+				<Menu isDropped={myPageIsOpen}>
+					<Ul>
+						<Li>
+							<LinkWrapper href="#1-1">메뉴1</LinkWrapper>
+						</Li>
+						<Li>
+							<LinkWrapper href="#1-2">메뉴2</LinkWrapper>
+						</Li>
+						<Li>
+							<LinkWrapper href="#1-3">메뉴3</LinkWrapper>
+						</Li>
+					</Ul>
+				</Menu>
+			</DropdownContainer>
+		</Wrapper>
 	);
 };
 
-export default DropDown;
+export default DropdownMenu;
+

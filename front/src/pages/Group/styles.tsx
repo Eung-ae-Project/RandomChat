@@ -97,9 +97,10 @@ export const ChatOption = styled.div`
 		& span{
 				font-size: 24px;
 				font-weight: 800;
+				display: flex;
 		}
 		& span:hover{
-				cursor: default;
+        cursor: pointer;
 		}
     & svg{
         margin-left: 4px;

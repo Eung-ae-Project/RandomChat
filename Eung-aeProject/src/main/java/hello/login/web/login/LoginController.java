@@ -16,6 +16,7 @@ import javax.validation.Valid;
 import java.util.Objects;
 @Slf4j
 @Controller
+//@CrossOrigin(originPatterns = "http://localhost:3000")
 @RequiredArgsConstructor
 public class LoginController {
 
@@ -71,25 +72,28 @@ public class LoginController {
 
     @PostMapping("/api/users/login")
     public String loginV3(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletRequest request) {
-        if (bindingResult.hasErrors()) {
-            return "login/loginForm";
-        }
-        System.out.println("LoginController.loginV3");
-        Member loginMember = loginService.login(form.getEmail(), form.getPassword());
-        log.info("login? {}", loginMember);
+        System.out.println("!!#!@#");
+        return "redirect:/group";
 
-        if (loginMember == null) {
-            bindingResult.reject("loginFail", "입력하신 이메일 또는 비밀번호와 일치하는 정보가 없습니다.");
-            return "login/loginForm";
-        }
-
-        //로그인 성공 처리
-        // 세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성
-        HttpSession session = request.getSession();
-        //세션에 로그인 회원 정보 보관
-        session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
-
-        return "redirect:/";
+//        if (bindingResult.hasErrors()) {
+//            return "login/loginForm";
+//        }
+//        System.out.println("LoginController.loginV3");
+//        Member loginMember = loginService.login(form.getEmail(), form.getPassword());
+//        log.info("login? {}", loginMember);
+//
+//        if (loginMember == null) {
+//            bindingResult.reject("loginFail", "입력하신 이메일 또는 비밀번호와 일치하는 정보가 없습니다.");
+//            return "login/loginForm";
+//        }
+//
+//        //로그인 성공 처리
+//        // 세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성
+//        HttpSession session = request.getSession();
+//        //세션에 로그인 회원 정보 보관
+//        session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
+//
+//        return "redirect:/";
     }
 
 //    @PostMapping("/logout")

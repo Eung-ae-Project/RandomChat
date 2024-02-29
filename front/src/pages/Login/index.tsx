@@ -15,7 +15,9 @@ const Login =()=>{
 				.post(
 					'/api/users/login',
 					{id,password},
-					{withCredentials:true,}
+					{
+						withCredentials: true,    //서로 다른 포트를 가진 url간 쿠키 공유
+					},
 				)
 				.then((response)=>{
 					console.log("성공..");

@@ -41,7 +41,9 @@ export const Search =styled.div`
 `;
 export const HotChat = styled.div`
     display: flex;
+		flex-direction: column;
     justify-content: center;
+		align-items: center;
     border-bottom: 2px solid #A4D3FF;
     height: 550px;
     font-size: 23px;

@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8207b375-1bb8-4802-a70a-e7736d83a7f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Eung-aeProject/src/main/java/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eung-aeProject/src/main/java/hello/login/qwer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-02-21__1_41__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-02-21_오전_1_41_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eung-aeProject/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Eung-aeProject/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eung-aeProject/src/main/java/hello/login/web/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eung-aeProject/src/main/java/hello/login/web/login/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +105,7 @@
       <workItem from="1709050704725" duration="2106000" />
       <workItem from="1709125140632" duration="4400000" />
       <workItem from="1709216714538" duration="730000" />
+      <workItem from="1709217454791" duration="3410000" />
     </task>
     <servers />
   </component>

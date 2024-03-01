@@ -17,6 +17,7 @@ body {
   min-width: 1650px;
   font-size: 35px;
   min-height: 100vh;
+/*position: absolute;*/
 }
 @font-face {
   font-family: 'BMHANNAPro';

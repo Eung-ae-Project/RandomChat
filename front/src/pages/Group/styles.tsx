@@ -42,11 +42,14 @@ export const Search =styled.div`
 export const HotChat = styled.div`
     display: flex;
 		flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 		align-items: center;
     border-bottom: 2px solid #A4D3FF;
+    position: relative;
+    z-index: 1;
     height: 550px;
     font-size: 23px;
+
     
 `;
 export const ChatSection = styled.div`
@@ -119,6 +122,13 @@ export const ChatBoxSect = styled.div`
 
 	width: 100%;
 `;
+export const HotChatTitle = styled.h2`
+   display: flex;
+    margin-top: 20px;
+`;
+export const FireImg = styled.img`
+   height: 45px;
+`;
 export const Box = styled.div`
 	margin-bottom: 25px;
 		background: #A4D3FF;
@@ -144,4 +154,36 @@ export const Box = styled.div`
 				display: flex;
 				justify-content: space-between;
 		}
+`;
+export const Carousel = styled.div`
+    position: relative;
+    width: 80%;
+    margin-bottom: 20px;
+`;
+export const UpWhiteBox = styled.div`
+    width: 100%;
+    background:linear-gradient(to top,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.25) 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.75) 75%,
+    rgba(255, 255, 255, 1) 100%);
+    height: 140px;
+    position: absolute;
+    z-index: 10;
+    
+`;
+export const DownWhiteBox = styled.div`
+    width: 100%;
+    background:linear-gradient(to bottom,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.25) 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.75) 75%,
+    rgba(255, 255, 255, 1) 100%);
+    height: 140px;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    
 `;

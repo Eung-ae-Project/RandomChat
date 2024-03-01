@@ -1,5 +1,5 @@
 import React from "react";
-import {HotChat} from "@pages/Group/styles";
+import {Carousel, DownWhiteBox, FireImg, HotChat, HotChatTitle, UpWhiteBox} from "@pages/Group/styles";
 
 import VerticalMode from "@components/Slider/VerticalMode";
 
@@ -9,12 +9,14 @@ const HotChatSect=()=> {
 
     return (
         <HotChat>
-            <h2>실시간 인기 채팅방</h2>
-            <div>
+            <HotChatTitle>실시간 인기 채팅방<FireImg src ="src/assets/fire.png"></FireImg></HotChatTitle>
+            <Carousel>
+                <UpWhiteBox></UpWhiteBox>
                 <VerticalMode>
-
                 </VerticalMode>
-            </div>
+                <DownWhiteBox></DownWhiteBox>
+            </Carousel>
+
         </HotChat>
 
     )

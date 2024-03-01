@@ -5,7 +5,7 @@ export const Box = styled.div`
 		background: #A4D3FF;
 		border: 1px solid ;
 		height: 140px;
-    
+        
 		border-radius: 20px;
     color: white;
 		& h3{

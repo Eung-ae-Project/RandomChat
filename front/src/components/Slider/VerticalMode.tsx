@@ -34,7 +34,9 @@ function VerticalMode() {
 		<SlickContainer className="slider-container">
 			<Slider {...settings}>
 				{tempChatRoom.map(({index,title})=>{
-					return <Box key={index}> <h3>{title}</h3> </Box>
+					return <Box key={index}>
+						<div className="title"><h3>{title}</h3></div>
+					</Box>
 				})}
 
 			</Slider>

@@ -13,12 +13,14 @@ const Login =()=>{
 			setLogInError(false);
 			axios
 				.post(
-					'',
+					'/api/users/login',
 					{id,password},
-					{withCredentials:true,}
+					{
+						withCredentials: true,    //서로 다른 포트를 가진 url간 쿠키 공유
+					},
 				)
-				.then(()=>{
-
+				.then((response)=>{
+					console.log("성공..");
 				})
 				.catch((error)=>{
 					setLogInError(error.response?.status === 401);
@@ -30,13 +32,13 @@ const Login =()=>{
 	return(
 		<div id ='container'>
 			<Img src="src/assets/logo.png" alt="logo" />
-			<Form onSubmit={onSubmit}>
-				<label id = 'id-label'>
-					<Input type ='id' id='id' name = 'id' value={id} onChange={onchangeId}/>
+			<Form method='post' onSubmit={onSubmit}>
+				<label htmlFor='email' id = 'id-label'>
+					<Input className="form-control" id='email' name = 'email' value={id} onChange={onchangeId}/>
 					{/* {logInError && <Error>이메일과 비밀번호 조합이 일치하지 않습니다.</Error>} */}
 				</label>
-				<label id = 'password-label'>
-					<Input type ='password' id='password' name = 'password' value={password} onChange={onchangePassword}/>
+				<label htmlFor='password' id = 'password-label'>
+					<Input className='form-control' type ='password' id='password' name = 'password' value={password} onChange={onchangePassword}/>
 				</label>
 				<Label id='islogin'>
 					<Input type='checkbox' id='islogin'/>로그인 유지하기

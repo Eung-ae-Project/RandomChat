@@ -3,7 +3,7 @@ import { Box, ChatBoxSect, ChatList, ChatOption, ChatSection, LeftBar, Li, Right
 import axios from "axios";
 import { faCaretDown, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import DropdownMenu from "@components/DropDown/DropDown";
+import DropdownMenu from "@components/DropDown/useDetectClose";
 
 const ChatSect=()=>{
 

@@ -22,4 +22,3 @@ const useDetectClose = (elem, initialState) => {
 };
 
 export default useDetectClose;
-출처: https://mingeesuh.tistory.com/entry/React-드롭다운-메뉴-만들기-feat-useRef-useState [코딩마차:티스토리]

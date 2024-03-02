@@ -55,6 +55,7 @@ export const HotChat = styled.div`
 export const ChatSection = styled.div`
     display: flex;
     justify-content: center;
+		position: relative;
 `;
 
 export const ChatList = styled.div`

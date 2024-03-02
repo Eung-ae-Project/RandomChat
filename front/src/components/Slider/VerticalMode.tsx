@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import '@components/Slider/styles/slick-theme.scss';
 import '@components/Slider/styles/slick.scss';
-import {Box, SlickContainer} from "@components/Slider/styles/styles"
+import {Box, SlickContainer} from "@components/Slider/styles/style"
 function VerticalMode() {
 	const settings = {
 		dots: false,

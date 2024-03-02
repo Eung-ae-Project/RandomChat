@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
-const useDetectClose = (elem, initialState) => {
+
+const useDetectClose = (elem:any, initialState:any) => {
 	const [isOpen, setIsOpen] = useState(initialState);
 
 	useEffect(() => {
-		const onClick = (e) => {
+		const onClick = (e:any) => {
 			if (elem.current !== null && !elem.current.contains(e.target)) {
 				setIsOpen(!isOpen);
 			}
@@ -22,4 +23,3 @@ const useDetectClose = (elem, initialState) => {
 };
 
 export default useDetectClose;
-출처: https://mingeesuh.tistory.com/entry/React-드롭다운-메뉴-만들기-feat-useRef-useState [코딩마차:티스토리]

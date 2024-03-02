@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import Link from "react-router-dom";
-import styles from "@components/DropDown/styles.scss";
+import styles from "@components/DropDown/qwer.scss";
 import classNames from "classNames";
 import useDetectClose from "@hooks/useDetectClose";
 

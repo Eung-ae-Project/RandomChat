@@ -105,6 +105,12 @@ export const ChatOption = styled.div`
 				font-weight: 800;
 				display: flex;
 		}
+		& > div{
+				position: relative;
+        font-size: 24px;
+        font-weight: 800;
+        display: flex;
+		}
 		& span:hover{
         cursor: pointer;
 		}

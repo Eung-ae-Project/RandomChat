@@ -5,6 +5,7 @@ const useDetectClose = (elem:any, initialState:any) => {
 	const [isOpen, setIsOpen] = useState(initialState);
 
 	useEffect(() => {
+		console.log("Dc",isOpen)
 		const onClick = (e:any) => {
 			if (elem.current !== null && !elem.current.contains(e.target)) {
 				setIsOpen(!isOpen);

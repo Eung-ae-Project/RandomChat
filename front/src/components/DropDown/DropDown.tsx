@@ -1,6 +1,6 @@
-import React, {useRef, useState} from "react";
+import React, {useRef} from "react";
 import Link from "react-router-dom";
-import styles from "@components/DropDown/qwer.scss";
+import styles from "@components/DropDown/qwer.module.css";
 import classNames from "classNames";
 import useDetectClose from "@hooks/useDetectClose";
 
@@ -8,6 +8,8 @@ import useDetectClose from "@hooks/useDetectClose";
 const DropDown = () => {
 	const dropDownRef = useRef(null);
 	const [isOpen, setIsOpen] = useDetectClose(dropDownRef, false);
+	console.log(isOpen);
+
 	return (
 		<div className={styles.dropDownMenu}>
 			<button
@@ -15,13 +17,12 @@ const DropDown = () => {
 			>
 				메뉴 보기
 			</button>
-
 			<ul
-				ref={dropDownRef}
+
 				className={classNames(styles.menu, { [styles.active]: isOpen })}
 			>
 				<li>
-					<Link href="/mypage">마이페이지</Link>
+					<h1>qwer</h1>
 				</li>
 				{/* 메뉴 리스트들 */}
 			</ul>

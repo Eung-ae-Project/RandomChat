@@ -4,6 +4,7 @@ import axios from "axios";
 import { faCaretDown, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DropDown from "@components/DropDown/DropDown";
+import CreateChat from "@components/CreateChat/CreateChat";
 
 const ChatSect=()=>{
 
@@ -112,12 +113,12 @@ const ChatSect=()=>{
 					<RightBar>
 						<ChatOption>
 							<div>
-								<DropDown></DropDown>
+								<DropDown content="정렬기준"></DropDown>
 							</div>
-							<span className="generateChat">
-								채팅방 생성
-								<FontAwesomeIcon icon={faPlus} />
-							</span>
+							<div className="generateChat">
+								<CreateChat>
+								</CreateChat>
+							</div>
 						</ChatOption>
 						<ChatBoxSect>
 							<ChatBox />

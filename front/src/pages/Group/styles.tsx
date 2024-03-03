@@ -100,18 +100,13 @@ export const ChatOption = styled.div`
 		display: flex;
 		justify-content: space-between;
 		padding: 10px;
-		& span{
-				font-size: 24px;
-				font-weight: 800;
-				display: flex;
-		}
 		& > div{
 				position: relative;
         font-size: 24px;
         font-weight: 800;
         display: flex;
 		}
-		& span:hover{
+		& div:hover{
         cursor: pointer;
 		}
     & svg{

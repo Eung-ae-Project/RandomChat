@@ -13,12 +13,12 @@ const DropDown = () => {
 	return (
 		<div className={styles.dropDownMenu}>
 			<button
+				ref={dropDownRef}
 				onClick={() => setIsOpen(!isOpen)}
 			>
 				메뉴 보기
 			</button>
 			<ul
-
 				className={classNames(styles.menu, { [styles.active]: isOpen })}
 			>
 				<li>

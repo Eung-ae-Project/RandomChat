@@ -1,7 +1,8 @@
 package hello.login.web.user;
 
-import hello.login.domain.user.User;
-import hello.login.domain.user.UserRepository;
+import hello.login.domain.user.SiteUser;
+import hello.login.domain.user.UserAddForm;
+import hello.login.domain.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -14,21 +15,31 @@ import javax.validation.Valid;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/api/users")
+@RequestMapping("/api")
 public class UserController {
-    private final UserRepository userRepository;
+//    private final UserRepository userRepository;
+    private final UserService userService;
 
-    @GetMapping("/add")
-    public String addForm(@ModelAttribute("user") User user) {
+    @GetMapping("/users/add")
+    public String addForm(UserAddForm userAddForm){
         return "users/addUserForm";
     }
 
-    @PostMapping("/add")
-    public String save(@Valid @ModelAttribute User user, BindingResult result) {
-        if (result.hasErrors()) {
+    @PostMapping("/users/add")
+    public String signup(@Valid UserAddForm userAddForm, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return "users/addUserForm";
         }
-        userRepository.save(user);
+
+        if (!userAddForm.getPassword().equals(userAddForm.getPasswordCheck())) {
+            bindingResult.rejectValue("passwordCheck", "passwordInCorrect",
+                    "2개의 패스워드가 일치하지 않습니다.");
+            return "users/addUserForm";
+        }
+
+        userService.create(userAddForm.getNickname(),
+                userAddForm.getEmail(), userAddForm.getPassword());
+
         return "redirect:/";
     }
 }

@@ -16,35 +16,37 @@
 </head>
 <body>
 <div class="container">
-    <div class="py-5 text-center"> <h2>회원 가입</h2>
+    <div class="py-5 text-center"><h2>회원 가입</h2>
     </div>
     <h4 class="mb-3">회원 정보 입력</h4>
-    <form action="" method="post" th:action th:object="${user}">
+    <form action="" method="post" th:action th:object="${siteUser}">
         <div th:if="${#fields.hasGlobalErrors()}">
             <p class="field-error" th:each="err : ${#fields.globalErrors()}"
-               th:text="${err}">전체 오류 메시지</p> </div>
+               th:text="${err}">전체 오류 메시지</p></div>
         <div>
             <label for="email">이메일</label>
             <input class="form-control" id="email"
                    th:errorclass="field-error"
                    th:field="*{email}"
                    type="text">
-            <div class="field-error" th:errors="*{email}" />
-        </div> <div>
-        <label for="password">비밀번호</label>
-        <input class="form-control" id="password"
-               th:errorclass="field-error"
-               th:field="*{password}"
-               type="password">
-        <div class="field-error" th:errors="*{password}" />
-    </div> <div>
-        <label for="nickname">닉네임</label>
-        <input class="form-control" id="nickname"
-               th:errorclass="field-error"
-               th:field="*{nickname}"
-               type="text">
-        <div class="field-error" th:errors="*{nickname}" />
-    </div>
+            <div class="field-error" th:errors="*{email}"/>
+        </div>
+        <div>
+            <label for="password">비밀번호</label>
+            <input class="form-control" id="password"
+                   th:errorclass="field-error"
+                   th:field="*{password}"
+                   type="password">
+            <div class="field-error" th:errors="*{password}"/>
+        </div>
+        <div>
+            <label for="nickname">닉네임</label>
+            <input class="form-control" id="nickname"
+                   th:errorclass="field-error"
+                   th:field="*{nickname}"
+                   type="text">
+            <div class="field-error" th:errors="*{nickname}"/>
+        </div>
         <hr class="my-4">
         <div class="row">
             <div class="col">
@@ -53,7 +55,8 @@
             <div class="col">
                 <button class="w-100 btn btn-secondary btn-lg"
                         onclick="location.href='items.html'"
-                        th:onclick="|location.href='@{/}'|" type="button">취소</button>
+                        th:onclick="|location.href='@{/}'|" type="button">취소
+                </button>
             </div>
         </div>
     </form>

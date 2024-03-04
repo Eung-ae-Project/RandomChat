@@ -1,6 +1,6 @@
 package hello.login.domain.login;
 
-import hello.login.domain.user.User;
+import hello.login.domain.user.SiteUser;
 import hello.login.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,9 +17,11 @@ public class LoginService {
      * @return null이면 로그인 실패
      */
 
-    public User login(String Email, String password) {
-        return userRepository.findByLoginId(Email)
-                .filter(m -> m.getPassword().equals(password))
-                .orElse(null);
+    public SiteUser login(String Email, String password) {
+//        return userRepository.findByLoginId(Email)
+//                .filter(m -> m.getPassword().equals(password))
+//                .orElse(null);
+//    }
+        return null;
     }
 }

@@ -1,7 +1,7 @@
 package hello.login.web.login;
 
 import hello.login.domain.login.LoginService;
-import hello.login.domain.user.User;
+import hello.login.domain.user.SiteUser;
 import hello.login.web.session.SessionConst;
 import hello.login.web.session.SessionManager;
 import lombok.RequiredArgsConstructor;
@@ -36,7 +36,7 @@ public class LoginController {
             return "users/login/loginForm";
         }
         System.out.println("LoginController.loginV3");
-        User loginUser = loginService.login(form.getEmail(), form.getPassword());
+        SiteUser loginUser = loginService.login(form.getEmail(), form.getPassword());
         log.info("login? {}", loginUser);
 
         if (loginUser == null) {
